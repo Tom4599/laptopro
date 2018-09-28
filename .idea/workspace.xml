@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="4bb9811c-1695-45b7-a5e1-735ae417c9a7" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
+=======
+    <list default="true" id="7a311e71-a24e-4cd4-a4d4-c62c8effdbea" name="Default Changelist" comment="" />
+>>>>>>> 55246dcc4fd18e5de03b0b3fa583f5cb07ce6b29
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FUSProjectUsageTrigger">
+<<<<<<< HEAD
     <session id="1466606551">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
@@ -94,12 +99,37 @@
       </list>
     </option>
   </component>
+=======
+    <session id="435917881">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="txt" value="12" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="PLAIN_TEXT" value="12" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+>>>>>>> 55246dcc4fd18e5de03b0b3fa583f5cb07ce6b29
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+<<<<<<< HEAD
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="85" />
     <option name="y" value="25" />
@@ -144,11 +174,53 @@
             <path>
               <item name="laptopro" type="b2602c69:ProjectViewProjectNode" />
               <item name="laptopro" type="462c0819:PsiDirectoryNode" />
+=======
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="laptopro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="laptopro" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="laptopro" type="b2602c69:ProjectViewProjectNode" />
               <item name="laptopro" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="laptopro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="laptopro" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="class" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="laptopro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="laptopro" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="laptopro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="laptopro" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 55246dcc4fd18e5de03b0b3fa583f5cb07ce6b29
+            </path>
+            <path>
+              <item name="laptopro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="laptopro" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="css" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 55246dcc4fd18e5de03b0b3fa583f5cb07ce6b29
             </path>
           </expand>
           <select />
@@ -156,6 +228,7 @@
       </pane>
     </panes>
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -165,6 +238,8 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
+=======
+>>>>>>> 55246dcc4fd18e5de03b0b3fa583f5cb07ce6b29
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -182,6 +257,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
       <changelist id="4bb9811c-1695-45b7-a5e1-735ae417c9a7" name="Default Changelist" comment="" />
       <created>1538136954077</created>
       <option name="number" value="Default" />
@@ -203,6 +279,39 @@
       <window_info id="Structure" order="1" sideWeight="0.50212765" side_tool="true" visible="true" weight="0.2536913" />
       <window_info id="Favorites" order="2" sideWeight="0.50070924" side_tool="true" weight="0.24983476" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+=======
+      <changelist id="7a311e71-a24e-4cd4-a4d4-c62c8effdbea" name="Default Changelist" comment="" />
+      <created>1538136985079</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1538136985079</updated>
+      <workItem from="1538136987533" duration="521000" />
+    </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <created>1538137089370</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1538137089370</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="521000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2497332" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32969433" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" weight="0.32969433" />
+>>>>>>> 55246dcc4fd18e5de03b0b3fa583f5cb07ce6b29
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -210,10 +319,13 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+=======
+>>>>>>> 55246dcc4fd18e5de03b0b3fa583f5cb07ce6b29
       <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -226,6 +338,7 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+<<<<<<< HEAD
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/css/navbar.css" />
     <entry file="file://$PROJECT_DIR$/src/views/header.php">
@@ -242,5 +355,10 @@
         </state>
       </provider>
     </entry>
+=======
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+>>>>>>> 55246dcc4fd18e5de03b0b3fa583f5cb07ce6b29
   </component>
 </project>
