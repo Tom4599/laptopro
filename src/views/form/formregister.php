@@ -17,8 +17,8 @@
                 <input class="form-control" name="mail" placeholder="Votre mail ..." required>
             </div>
             <div class="col-md-3">
-                <label for="tel">Téléphone : </label>
-                <input class="form-control" name="tel" placeholder="Votre téléphone..." required>
+                <label for="tel">Adresse : </label>
+                <input class="form-control" name="adresse" placeholder="Votre adresse..." required>
             </div>
         </div>
         <hr>

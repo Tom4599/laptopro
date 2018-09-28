@@ -8,8 +8,7 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
                 <li class="nav-item"> <a class="nav-link" href="#">Login</a>
-                </li> <li class="nav-item"> <a class="nav-link" href="#">Sign in</a> </li>
+                </li> <li class="nav-item"> <a class="nav-link" href="src/controller/signin.php">Sign in</a> </li>
             </ul>
         </div>
-    </div>
 </nav>
