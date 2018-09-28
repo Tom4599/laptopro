@@ -21,7 +21,6 @@
 
     <!-- Navigation -->
     <?php
-    require_once("src/views/header.php");
     ?>
     <header>
         <?php
