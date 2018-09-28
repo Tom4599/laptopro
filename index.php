@@ -14,7 +14,6 @@ include_once("src/views/head.html");
         require_once("src/views/carousel.php");
         ?>
     </header>
-
     <div class="panel panel-primary">
         <div class="panel-heading">Recherche / Filtres</div>
         <div class="panel-body">
