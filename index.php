@@ -4,12 +4,10 @@
 <?php
 include_once("src/views/head.html");
 ?>
-
   <body>
-
     <!-- Navigation -->
     <?php
-    require_once("src/views/navbar.html")
+    require_once("src/views/navbar.php")
     ?>
     <header>
         <?php
