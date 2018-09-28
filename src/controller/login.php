@@ -7,7 +7,7 @@
     require("../views/head.html");
     include_once('../model/getDatabase.php');
     if (!isset($bdd)) {
-        $bdd = getDatabase();
+//        $bdd = getDatabase();
     }
   ?>
 
@@ -38,9 +38,11 @@
             echo "<div class='container'><div class='d-block centrer mt-2'><p>Le mail donné n'existe pas</p></div></div>";
             require("../views/form/formlogin.php");
           }
+        } else {
+            require_once("../views/form/formlogin.php");
         }
 
-        require("../views/script.php");
+        require("../views/scripts.php");
     ?>
 
   </body>

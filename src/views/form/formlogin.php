@@ -1,13 +1,5 @@
 <div class="container">
     <form class="form-horizontal" role="form" method="POST" action="../controller/login.php">
-    <?php
-    if (isset($redirection)) {
-        echo '<input type="hidden" name="redirection" value="'.$redirection.'">';
-    }
-    if (isset($id_excursion)) {
-        echo '<input type="hidden" name="id_excursion" value="'.$id_excursion.'">';
-    }
-    ?>
         <div class="row justify-content-center text-center">
             <div class="col-6 mt-4">
                 <h4>Merci de vous connecter</h4>
