@@ -21,7 +21,11 @@
   <body>
 
     <!-- Navigation -->
+    <?php
+    require_once("src/views/header.php");
+    
 
+    ?>
     <header>
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
