@@ -7,14 +7,14 @@
     include_once("../views/head.html");
     include_once('../model/getDatabase.php');
     if (!isset($bdd)) {
-       $bdd = getDatabase();
+//       $bdd = getDatabase();
     }
   ?>
 
   <body id="page-top">
 
     <?php
-        require("../views/header.php");
+        require("../views/navbar.php");
 
         if (isset($_POST["submit"])) {
           if (isset($_POST["nom"])&&!empty($_POST["nom"])&&
@@ -58,13 +58,13 @@
         }
         
 
-//        include_once("../views/script.php");
+        include_once("../views/scripts.php");
     ?>
 
   </body>
 
   <?php
-//    include_once("../views/footer.php");
+    include_once("../views/footer.php");
   ?>
 
 </html>
