@@ -9,6 +9,7 @@ include_once("src/views/head.html");
 
     <!-- Navigation -->
     <?php
+    require_once("src/views/navbar.html")
     ?>
     <header>
         <?php
@@ -42,16 +43,14 @@ include_once("src/views/head.html");
     ?>
 
     <!-- Footer -->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
-      </div>
-      <!-- /.container -->
-    </footer>
+    <?php
+    require_once("src/views/footer.php");
+    ?>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <?php
+    require_once("src/views/scripts.php");
+    ?>
   </body>
 
 </html>

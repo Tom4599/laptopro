@@ -7,7 +7,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                <li class="nav-item"> <a class="nav-link" href="#">Login</a>
+                <li class="nav-item"> <a class="nav-link" href="src/controller/login.php">Login</a>
                 </li> <li class="nav-item"> <a class="nav-link" href="src/controller/signin.php">Sign in</a> </li>
             </ul>
         </div>
