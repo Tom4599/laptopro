@@ -30,7 +30,7 @@
         </ul>
         <span class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="src/controller/signin.php"><i class="fas fa-sign-in-alt"></i> Sign Up</a>
+                <a class="nav-link" href="src/controller/signup.php"><i class="fas fa-sign-in-alt"></i> Sign Up</a>
             </li>
             <li class="nav-item">
 
