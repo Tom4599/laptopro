@@ -1,65 +1,33 @@
 <?php
-    require_once($_SERVER["DOCUMENT_ROOT"] . "/laptopro/src/controller/itemcontroller.php");
+require_once($_SERVER["DOCUMENT_ROOT"] . "/laptopro/src/controller/itemcontroller.php");
+require_once($_SERVER["DOCUMENT_ROOT"] ."/laptopro/src/model/itemmodel.php");
 ?>
 <div class="card-header">
     <div class="card-header">
         Recherche / Filtres
     </div>
-
     <div class="card-body">
-
-
         <div class="input-group">
-            <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder=" Recherchez Un ordinateur ">
+            <input type="text" class="form-control" aria-label="Text input with dropdown button">
             <div class="input-group-append">
-                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-                    <div class="btn-group" role="group">
-                        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Marque
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                            <?php
-//                            getcategoriedropdown(marque);
-                            ?>
-                        </div>
-                    </div>
-                    <div class="btn-group" role="group">
-                        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Processeur
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                            <a class="dropdown-item" href="#">Dropdown link</a>
-                            <a class="dropdown-item" href="#">Dropdown link</a>
-                        </div>
-                    </div>
-                    <div class="btn-group" role="group">
-                        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Stockage
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                            <a class="dropdown-item" href="#">Dropdown link</a>
-                            <a class="dropdown-item" href="#">Dropdown link</a>
-                        </div>
-                    </div>
-                    <div class="btn-group" role="group">
-                        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Ecran
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                            <a class="dropdown-item" href="#">Dropdown link</a>
-                            <a class="dropdown-item" href="#">Dropdown link</a>
-                        </div>
-                    </div>
-                    <div class="btn-group" role="group">
-                        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Carte Graphique
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                            <a class="dropdown-item" href="#">Dropdown link</a>
-                            <a class="dropdown-item" href="#">Dropdown link</a>
-                        </div>
-                    </div>
-                </div>
+                <select class="custom-select" id="inputGroupSelect01">
+                    <option selected>Marque</option>
+                    <?php
+                    getmarqueselect();
+                    ?>
+                </select>
+                <select class="custom-select" id="inputGroupSelect01">
+                    <option selected>Choose...</option>
+                    <option value="1">chose</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+                <select class="custom-select" id="inputGroupSelect01">
+                    <option selected>Choose...</option>
+                    <option value="1">truc</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
             </div>
         </div>
     </div>

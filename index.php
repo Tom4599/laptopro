@@ -14,9 +14,11 @@ include_once("src/views/head.html");
         require_once("src/views/carousel.php");
         ?>
     </header>
+    <a>
     <?php
     require_once("src/views/search.php");
     ?>
+    </a>
 
     <!-- Page Content -->
 
