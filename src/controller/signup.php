@@ -40,21 +40,21 @@
                   insertUser($nom,$prenom,$adresse,$cp,$ville,$mail,$password,$bdd);
                   header("Location:login.php");
               } else {
-                echo "<div class='container'><div class='d-block centrer mt-2'><p>Le mail n'est pas correct</p></div></div>";
-                require("../views/form/formlogin.php");
+                    echo "<div class='container'><div class='d-block centrer mt-2'><p>Le mail n'est pas correct</p></div></div>";
+                    require("../views/form/formregister.php");
               }
               
             } else {
-              echo "<div class='container'><div class='d-block centrer mt-2'><p>Vos deux mots de passe ne sont pas identiques</p></div></div>";
-              require("../views/form/formlogin.php");
+                echo "<div class='container'><div class='d-block centrer mt-2'><p>Vos deux mots de passe ne sont pas identiques</p></div></div>";
+                require("../views/form/formregister.php");
             }
           } else {
-            echo "<div class='container'><div class='d-block centrer mt-2'><p>Veuillez remplir tous les champs</p></div></div>";
-            require("../views/form/formlogin.php");
+                echo "<div class='container'><div class='d-block centrer mt-2'><p>Veuillez remplir tous les champs</p></div></div>";
+                require("../views/form/formregister.php");
           }
           
         } else {
-          require("../views/form/formlogin.php");
+            require("../views/form/formregister.php");
         }
         
 
