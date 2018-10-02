@@ -1,5 +1,5 @@
 <div class="container">
-    <form action="../controller/signin.php" method="post">
+    <form action="../controller/signup.php" method="post">
         <div class="row mt-4">
             <div class="col-md-6">
                 <label for="nom">Nom : </label>

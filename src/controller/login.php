@@ -7,7 +7,7 @@
     require("../views/head.html");
     include_once('../model/getDatabase.php');
     if (!isset($bdd)) {
-//        $bdd = getDatabase();
+        $bdd = getDatabase();
     }
   ?>
 
@@ -30,6 +30,7 @@
                 // All the user data is in the $_SESSION[]
                 $_SESSION = $userinfo;
                 //echo '<script>alert("Vous êtes maintenant connecter");</script>';
+                  header("Location:index.php");
               } else {
                 echo "<div class='container'><div class='d-block centrer mt-2'><p>Le mot de passe est incorrect</p></div></div>";
                 require("../views/form/formlogin.php");
