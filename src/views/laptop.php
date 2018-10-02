@@ -2,6 +2,7 @@
 require_once($_SERVER["DOCUMENT_ROOT"] . "/laptopro/src/controller/laptopcontroller.php");
 require_once($_SERVER["DOCUMENT_ROOT"] ."/laptopro/src/model/laptopmodel.php");
 $laptop = getlaptopfromdid($_GET['id']);
+$etat=getlaptopetat($laptop['etat'])
 echo ('
 
 <div class="container">
@@ -47,14 +48,13 @@ echo ('
             </div>
         
             <div class="col-md-4">
-              <h3 class="my-3">Project Description</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
-              <h3 class="my-3">Project Details</h3>
+              <h3 class="my-3">Caractéristiques Techniques</h3>
+              <h3 class="my-3">Caractéristiques Techniques</h3>
               <ul>
-                <li>Lorem Ipsum</li>
-                <li>Dolor Sit Amet</li>
-                <li>Consectetur</li>
-                <li>Adipiscing Elit</li>
+                <li>etat '.$etat.'</li>
+                <li>'.$laptop[''].'</li>
+                <li>'.$laptop[''].'</li>
+                <li>'.$laptop[''].'</li>
               </ul>
             </div>
         
