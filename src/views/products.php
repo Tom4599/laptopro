@@ -3,7 +3,7 @@
     <?php
     require_once($_SERVER["DOCUMENT_ROOT"] . "/laptopro/src/controller/laptopcontroller.php");
     require_once($_SERVER["DOCUMENT_ROOT"] ."/laptopro/src/model/laptopmodel.php");
-    @getlaptopcard();
+    getlaptopcard();
     ?>
 <!--    <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">-->
 <!--        <div class="card h-100">-->

@@ -30,3 +30,15 @@ Function getlaptopetat($etat) {
     }
     return($bouton);
 }
+
+Function getlaptopfromdid($id) {
+    $bdd=getDatabase();
+    $sth = "SELECT * FROM laptop_full_info WHERE id_laptop='$id'";
+
+    #This send the request to the database and returns a list
+    $laptopquery = $bdd->prepare($sth);
+    $laptopquery->execute();
+    $laptop = $laptopquery->fetch(PDO::FETCH_ASSOC);
+
+    return $laptop;
+}

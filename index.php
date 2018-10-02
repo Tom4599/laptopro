@@ -11,7 +11,7 @@ include_once("src/views/head.html");
     ?>
     <header>
         <?php
-        require_once("src/views/carousel.php");
+//        require_once("src/views/carousel.php");
         ?>
     </header>
     <a>
