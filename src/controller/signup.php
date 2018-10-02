@@ -7,7 +7,7 @@
     include_once("../views/head.html");
     include_once('../model/getDatabase.php');
     if (!isset($bdd)) {
-//       $bdd = getDatabase();
+       $bdd = getDatabase();
     }
   ?>
 
@@ -37,7 +37,7 @@
               $password = sha1($password);
               $regex = "#^[\w\-\+]+(\.[\w\-]+)*@[\w\-]+(\.[\w\-]+)*\.[\w\-]{2,4}$#";
               if (preg_match($regex,$mail)) {
-                  insertUser($nom,$prenom,$adresse,$cp,$ville,$mail,$password,$bdd);
+                  insertUser($mail, $password, $nom, $prenom, $ville, $cp, $adresse, $bdd);
                   header("Location:login.php");
               } else {
                     echo "<div class='container'><div class='d-block centrer mt-2'><p>Le mail n'est pas correct</p></div></div>";
