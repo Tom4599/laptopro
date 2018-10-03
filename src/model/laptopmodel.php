@@ -42,3 +42,9 @@ Function getlaptopfromdid($id) {
 
     return $laptop;
 }
+
+function getlaptopstockage($laptop) {
+    if ($laptop['']){
+
+    }
+}

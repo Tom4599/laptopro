@@ -48,16 +48,26 @@ echo ('
             </div>
         
             <div class="col-md-4">
-              <h3 class="my-3">Caractéristiques Techniques</h3>
+              <h3 class="my-3">Overview</h3>
               
               <ul>
-                <li>etat :'.$etat.'</li>
+                <li>Marque : '.$laptop['marque'].'</li>
+                <li>Etat : '.$etat.'</li>
+                <li>Taille : '.$laptop['taille'].' pouces</li>
+                <li>Définition : '.$laptop['definition'].'p</li>
+              </ul>
+              <h3 class="my-3">Caractéristiques Techniques</h3>
+              <ul>
+                <li>Mémoire Ram : '.$laptop['ram'].' pouces</li>
+                <li>Stockage : '.$laptop['definition'].'p</li>
+                <li>'.$laptop[''].'</li>
+                <li>Taille : '.$laptop['taille'].' pouces</li>
+                <li>Définition : '.$laptop['definition'].'p</li>
+                <li>'.$laptop[''].'</li>
                 <li>Taille : '.$laptop['taille'].' pouces</li>
                 <li>Définition : '.$laptop['definition'].'p</li>
                 <li>'.$laptop[''].'</li>
               </ul>
-              <h3 class="my-3">Caractéristiques Techniques</h3>
-              w
             </div>
         
         </div>
