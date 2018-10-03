@@ -2,7 +2,7 @@
 require_once($_SERVER["DOCUMENT_ROOT"] . "/laptopro/src/controller/laptopcontroller.php");
 require_once($_SERVER["DOCUMENT_ROOT"] ."/laptopro/src/model/laptopmodel.php");
 $laptop = getlaptopfromdid($_GET['id']);
-$etat=getlaptopetat($laptop['etat'])
+$etat=getlaptopetat($laptop['etat']);
 echo ('
 
 <div class="container">
@@ -49,13 +49,15 @@ echo ('
         
             <div class="col-md-4">
               <h3 class="my-3">Caractéristiques Techniques</h3>
-              <h3 class="my-3">Caractéristiques Techniques</h3>
+              
               <ul>
-                <li>etat '.$etat.'</li>
-                <li>'.$laptop[''].'</li>
-                <li>'.$laptop[''].'</li>
+                <li>etat :'.$etat.'</li>
+                <li>Taille : '.$laptop['taille'].' pouces</li>
+                <li>Définition : '.$laptop['definition'].'p</li>
                 <li>'.$laptop[''].'</li>
               </ul>
+              <h3 class="my-3">Caractéristiques Techniques</h3>
+              w
             </div>
         
         </div>
