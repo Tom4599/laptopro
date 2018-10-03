@@ -13,20 +13,20 @@ function getlaptopitem(){
 }
 
 Function getlaptopetat($etat) {
-    if ($etat == 'Neuf') {
-        $bouton = '<span class="badge badge-primary"> neuf </span>';
+    if ($etat == 4) {
+        $bouton = '<span class="badge badge-success"> Neuf </span>';
     }
-    elseif ($etat == 'Peu Usé') {
-        $bouton = '<span class="badge badge-secondary"> Peu Usé </span>';
+    elseif ($etat == 3) {
+        $bouton = '<span class="badge badge-primary"> Bon état </span>';
     }
-    elseif ($etat == 'Usé') {
-        $bouton = '<span class="badge badge-warning"> Usé </span>';
+    elseif ($etat == 2) {
+        $bouton = '<span class="badge badge-warning"> Moyen </span>';
     }
-    elseif ($etat == 'Trés Usé') {
-        $bouton = '<span class="badge badge-danger"> Trés Usé </span>';
+    elseif ($etat == 1) {
+        $bouton = '<span class="badge badge-danger"> Mauvais état </span>';
     }
     else {
-        $bouton = '<span class="badge badge-info"> Non renseigné </span>';
+        $bouton = '<span class="badge badge-secondary"> Non renseigné </span>';
     }
     return($bouton);
 }
