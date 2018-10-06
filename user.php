@@ -9,25 +9,16 @@ include_once("src/views/head.html");
 <?php
 require_once("src/views/navbar.php")
 ?>
-<header>
-    <?php
-//            require_once("src/views/carousel.php");
-    ?>
-</header>
 
 <!-- Page Content -->
-
 <?php
-require_once("src/views/laptop.php");
 ?>
-
 <!-- Footer -->
 <?php
 require_once("src/views/footer.php");
 ?>
 
 <!-- Bootstrap core JavaScript -->
-<script src="src/views/js/laptop.js"></script>
 <?php
 require_once("src/views/scripts.php");
 ?>

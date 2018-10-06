@@ -2,7 +2,6 @@
 <html lang="fr">
 
   <?php
-    session_start();
     include_once("../model/insertUser.php");
     include_once("../views/head.html");
     include_once('../model/getDatabase.php');

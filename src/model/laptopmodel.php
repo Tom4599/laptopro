@@ -44,7 +44,137 @@ Function getlaptopfromdid($id) {
 }
 
 function getlaptopstockage($laptop) {
-    if ($laptop['']){
+    if ($laptop['espace_stockage_hdd'] or $laptop['espace_stockage_ssd'] != null){
+        if ($laptop['espace_stockage_ssd'] != null and $laptop['espace_stockage_hdd'] == null){
+            $retour=('<li>Stockage SSD : '.$laptop['espace_stockage_ssd'].'</li>');
+        }
+        elseif ($laptop['espace_stockage_hdd'] != null and $laptop['espace_stockage_ssd'] == null){
+            $retour=('<li>Stockage HDD : '.$laptop['espace_stockage_hdd'].'</li>');
+        }
+        else {
+            $retour=('<li>Stockage SSD : '.$laptop['espace_stockage_ssd'].'</li>
+                      <li>Stockage HDD : '.$laptop['espace_stockage_hdd'].'</li>');
+        }
+
 
     }
+    else {
+        $retour=('<li>Pas de Stockage Intégré</li>');
+    }
+    return $retour;
+}
+
+function getlaptopcarousel($laptop){
+    if ($laptop['url_photo3']!=null && $laptop['url_photo2']!=null && $laptop['url_photo1']!=null){
+        $carousel=('
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                          <!-- Slide One - Set the background image for this slide in the line below -->
+                          <div class="carousel-item active">
+                                <img class="d-block w-100" src='.$laptop['url_photo1'].' alt="First slide">
+                          </div>
+                          <!-- Slide Two - Set the background image for this slide in the line below -->
+                          <div class="carousel-item" >
+                                <img class="d-block w-100" src='.$laptop['url_photo2'].' alt="Second slide">
+                          </div>
+                          <div class="carousel-item" >
+                                <img class="d-block w-100" src='.$laptop['url_photo3'].' alt="Third slide">
+                          </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="fas fa-arrow-alt-circle-left fa-3x" style="color: black"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="fas fa-arrow-alt-circle-right fa-3x" style="color: black"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                
+                ');
+    }
+    elseif ($laptop['url_photo3']==null && $laptop['url_photo2']!=null && $laptop['url_photo1']!=null){
+        $carousel=('
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                          <!-- Slide One - Set the background image for this slide in the line below -->
+                          <div class="carousel-item active">
+                                <img class="d-block w-100" src='.$laptop['url_photo1'].' alt="First slide">
+                          </div>
+                          <!-- Slide Two - Set the background image for this slide in the line below -->
+                          <div class="carousel-item" >
+                                <img class="d-block w-100" src='.$laptop['url_photo2'].' alt="Second slide">
+                          </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="fas fa-arrow-alt-circle-left fa-3x" style="color: black"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="fas fa-arrow-alt-circle-right fa-3x" style="color: black"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                
+                ');
+    }
+    elseif ($laptop['url_photo3']==null && $laptop['url_photo2']==null && $laptop['url_photo1']!=null){
+
+        $carousel=('
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                          <!-- Slide One - Set the background image for this slide in the line below -->
+                          <img class="d-block w-100" src='.$laptop['url_photo1'].' alt="Premiére Image">
+
+                    </div>
+                </div>
+                
+                ');
+
+    }
+    else{
+        $carousel=('
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                          <!-- Slide One - Set the background image for this slide in the line below -->
+                          <div class="carousel-item active">
+                                <h1>Pas d\'image Renseignée</h1>
+                          </div>
+                    </div>
+                </div>
+                
+                ');
+    }
+    return $carousel;
+}
+
+function getlaptoppaiment($laptop){
+//    $_POST['login']='true';
+    if (isset($_SESSION)){
+        $prop=getuserprop($laptop['id_laptop']);
+        if ($prop == $_SESSION['id_user']){
+            $logbutton=('<a type="button" class="btn btn-primary btn-lg btn-block disabled" >Deja Proposé</a>');
+        }
+        else{
+            $logbutton=('<a type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#exampleModal">Proposer</a>');
+        }
+
+    }
+    else{
+        $_POST['redirection']=('laptop.php?id='.$laptop['id_laptop'].'');
+        $logbutton=('<a type="button" class="btn btn-primary btn-lg btn-block" href="src/controller/login.php">Proposer</a>');
+    }
+    return $logbutton;
+}
+
+function getuserprop($id){
+    $bdd=getDatabase();
+    $sth = "SELECT id_user FROM demande WHERE id_laptop='$id'";
+
+    #This send the request to the database and returns a list
+    $laptopquery = $bdd->prepare($sth);
+    $laptopquery->execute();
+    $rep = $laptopquery->fetch(PDO::FETCH_ASSOC);
+    return $rep['id_user'];
+
 }

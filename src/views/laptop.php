@@ -1,75 +1,90 @@
 <?php
 require_once($_SERVER["DOCUMENT_ROOT"] . "/laptopro/src/controller/laptopcontroller.php");
 require_once($_SERVER["DOCUMENT_ROOT"] ."/laptopro/src/model/laptopmodel.php");
+
 $laptop = getlaptopfromdid($_GET['id']);
 $etat=getlaptopetat($laptop['etat']);
+$stockage=getlaptopstockage($laptop);
+$images=getlaptopcarousel($laptop);
+$paiment=getlaptoppaiment($laptop);
+$prixmax=$laptop['prix'] + 50;
+$prixmin=$laptop['prix'] - 50;
+if ($prixmin<0){
+    $prixmin=0;
+};
 echo ('
 
 <div class="container">
     <div class="jumbotron">
-        <h1 class="display-4">'.$laptop['laptop_nom'].'
-        <small>Vendeur : <a href="user.php?='.$laptop['id_vendeur'].'">'.$laptop['vendeur'].'</a> </small>
+        <h1 class="display-4">
+            <div class="row">
+                <span class="col-6">
+                '.$laptop['marque'].'  '.$laptop['laptop_nom'].'
+                </span>
+                <span class="col-6">
+                <small>Vendeur : <a href="user.php?='.$laptop['id_vendeur'].'">'.$laptop['vendeur'].'</a> </small>
+                </span>
+            </div>
         </h1>
         <hr class="my-4">
         <div class="row">
         
             <div class="col-md-8">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner" role="listbox">
-                          <!-- Slide One - Set the background image for this slide in the line below -->
-                          <div class="carousel-item active">
-                                <img class="d-block w-100" src=".../800x400?auto=yes&bg=555&fg=333&text=Third slide" alt="Third slide">
-                          </div>
-                          <!-- Slide Two - Set the background image for this slide in the line below -->
-                          <div class="carousel-item" >
-                                <img class="d-block w-100" src=".../800x400?auto=yes&bg=555&fg=333&text=Third slide" alt="Third slide">
-                          </div>
-                          <!-- Slide Three - Set the background image for this slide in the line below -->
-                          <div class="carousel-item">
-                                <img class="d-block w-100" src=".../800x400?auto=yes&bg=555&fg=333&text=Third slide" alt="Third slide">
-                          </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-            
-              <img class="img-fluid" src='.$laptop['url_photo1'].' alt="">
+                '.$images.'            
             </div>
         
             <div class="col-md-4">
               <h3 class="my-3">Overview</h3>
               
               <ul>
+                <li>Prix : '.$laptop['prix'].'</li>
                 <li>Marque : '.$laptop['marque'].'</li>
                 <li>Etat : '.$etat.'</li>
                 <li>Taille : '.$laptop['taille'].' pouces</li>
                 <li>Définition : '.$laptop['definition'].'p</li>
+                <li>Poids : '.$laptop['poids'].'</li>
+                <li>Type de Stockage : '.$laptop['stockage'].'</li>
+                
               </ul>
               <h3 class="my-3">Caractéristiques Techniques</h3>
               <ul>
                 <li>Mémoire Ram : '.$laptop['ram'].' pouces</li>
-                <li>Stockage : '.$laptop['definition'].'p</li>
-                <li>'.$laptop[''].'</li>
-                <li>Taille : '.$laptop['taille'].' pouces</li>
-                <li>Définition : '.$laptop['definition'].'p</li>
-                <li>'.$laptop[''].'</li>
-                <li>Taille : '.$laptop['taille'].' pouces</li>
-                <li>Définition : '.$laptop['definition'].'p</li>
-                <li>'.$laptop[''].'</li>
+                '.$stockage.'
+                <li>Processeur : '.$laptop['processeur'].'</li>
+                <li>Type d\'écran : '.$laptop['ecran'].'</li>
+                <li>Carte Graphique : '.$laptop['carte_graphique'].'</li>
               </ul>
+                '.$paiment.'
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Propositon</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <form>
+                          <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Proposez votre prix</label>
+                            <input type="number" name="quantity" min="'.$prixmin.'" max="'.$prixmax.'" id="prix" class="form-control" value="'.$laptop['prix'].'">
+                          </div> 
+                          <p>Prix de base : '.$laptop['prix'].'</p>                       
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary" onclick="sendproposition('.$laptop['id_laptop'].','.$prixmin.','.$prixmax.')">Proposer</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
             </div>
-        
+            
+            
+            
+                        
         </div>
     </div>
 </div>
