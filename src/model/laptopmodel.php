@@ -152,7 +152,10 @@ function getlaptoppaiment($laptop){
 //    $_POST['login']='true';
     if (isset($_SESSION)){
         $prop=getuserprop($laptop['id_laptop']);
-        if ($prop == $_SESSION['id_user']){
+        if ($_SESSION['id_user']==$laptop['id_vendeur']){
+            $logbutton=('<a type="button" class="btn btn-primary btn-lg btn-block" href="src/controller/login.php">Modifer</a>');
+        }
+        elseif ($prop == $_SESSION['id_user']){
             $logbutton=('<a type="button" class="btn btn-primary btn-lg btn-block disabled" >Deja Proposé</a>');
         }
         else{
@@ -177,4 +180,25 @@ function getuserprop($id){
     $rep = $laptopquery->fetch(PDO::FETCH_ASSOC);
     return $rep['id_user'];
 
+}
+function getuserlaptop($user_id){
+    $bdd=getDatabase();
+    $sth = "SELECT * FROM laptop_full_info WHERE id_vendeur ='$user_id'";
+
+    #This send the request to the database and returns a list
+    $categorieitem = $bdd->prepare($sth);
+    $categorieitem->execute();
+    $arrayitem = $categorieitem->fetchAll(PDO::FETCH_ASSOC);
+
+    return $arrayitem;
+}
+function getuserdemandes($user_id){
+    $bdd=getDatabase();
+    $sth = "SELECT * FROM demande_full_info WHERE id_vendeur='$user_id'";
+
+    #This send the request to the database and returns a list
+    $laptopquery = $bdd->prepare($sth);
+    $laptopquery->execute();
+    $rep = $laptopquery->fetchAll(PDO::FETCH_ASSOC);
+    return $rep;
 }

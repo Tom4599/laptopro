@@ -22,7 +22,7 @@ echo ('
                 '.$laptop['marque'].'  '.$laptop['laptop_nom'].'
                 </span>
                 <span class="col-6">
-                <small>Vendeur : <a href="user.php?='.$laptop['id_vendeur'].'">'.$laptop['vendeur'].'</a> </small>
+                <small>Vendeur : <a href="user.php?id='.$laptop['id_vendeur'].'">'.$laptop['vendeur'].'</a> </small>
                 </span>
             </div>
         </h1>

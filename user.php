@@ -12,6 +12,17 @@ require_once("src/views/navbar.php")
 
 <!-- Page Content -->
 <?php
+if (isset($_GET['id'])){
+    if ($_GET['id']==$_SESSION['id_user']){
+        require_once('src/views/userself.php');
+    }
+    else{
+        require_once('src/views/user.php');
+    }
+}
+else{
+    require_once('src/views/userself.php');
+}
 ?>
 <!-- Footer -->
 <?php

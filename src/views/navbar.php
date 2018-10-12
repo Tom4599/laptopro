@@ -9,14 +9,17 @@ session_start();
     <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="http://localhost/laptopro/index.php">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="http://localhost/laptopro/index.php">Acceuil <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-            </li>
+            <?php
+            if (isset($_SESSION['id_user'])) {
+                echo('
+                <li class="nav-item">
+                    <a class="nav-link" href="http://localhost/laptopro/index.php">Ajouter une annonce</a>
+                </li>
+                ');
+            }
+            ?>
         </ul>
         <?php
             if (isset($_SESSION['id_user'])){
@@ -27,7 +30,7 @@ session_start();
                     </li>
                     <li class="nav-item">
         
-                        <a class="nav-link" href="user.php">Moncompte</a>
+                        <a class="nav-link" href="http://localhost/laptopro/user.php">Mon compte</a>
                     </li>
                 </span>
                 ');

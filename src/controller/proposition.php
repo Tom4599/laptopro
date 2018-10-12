@@ -19,4 +19,4 @@ if($_POST['action']=='proposition'){
     $result='true';
 }
 $jsonstring = json_encode($result);
-echo $jsonstring;
+//echo $jsonstring;
