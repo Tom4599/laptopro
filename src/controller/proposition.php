@@ -18,5 +18,29 @@ if($_POST['action']=='proposition'){
     $laptop->execute();
     $result='true';
 }
+
+if($_POST['action']=='accept'){
+    session_start();
+    $laptop_id=$_POST['laptop_id'];
+    $user_id=$_POST['user_id'];
+    $bdd=getDatabase();
+    $sth = "UPDATE demande SET `acceptation` = '1' WHERE `demande`.`id_laptop` = $laptop_id AND `demande`.`id_user` = $user_id;";
+    echo $sth;
+    $laptop = $bdd->prepare($sth);
+    $laptop->execute();
+    $result='true';
+}
+
+if($_POST['action']=='decline'){
+    session_start();
+    $laptop_id=$_POST['laptop_id'];
+    $user_id=$_POST['user_id'];
+    $bdd=getDatabase();
+    $sth = "UPDATE demande SET `acceptation` = '0' WHERE `demande`.`id_laptop` = $laptop_id AND `demande`.`id_user` = $user_id;";
+    $laptop = $bdd->prepare($sth);
+    $laptop->execute();
+    $result='true';
+}
+
 $jsonstring = json_encode($result);
-//echo $jsonstring;
+echo $jsonstring;

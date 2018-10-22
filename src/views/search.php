@@ -17,16 +17,28 @@ require_once($_SERVER["DOCUMENT_ROOT"] ."/laptopro/src/model/itemmodel.php");
                     ?>
                 </select>
                 <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">chose</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option selected>Processeur</option>
+                    <?php
+                    getprocesseurselect();
+                    ?>
                 </select>
                 <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">truc</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    <option selected>Stockage</option>
+                    <?php
+                    getstockageselect();
+                    ?>
+                </select>
+                <select class="custom-select" id="inputGroupSelect01" style="width:110%">
+                    <option selected>Carte Graphique</option>
+                    <?php
+                    getcgselect();
+                    ?>
+                </select>
+                <select class="custom-select" id="inputGroupSelect01">
+                    <option selected>Ecran</option>
+                    <?php
+                    getecranselect();
+                    ?>
                 </select>
             </div>
         </div>

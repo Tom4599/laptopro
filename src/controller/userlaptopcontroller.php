@@ -70,8 +70,8 @@ function getdemandes($user_id){
             <button type="button" class="btn btn-info btn-lg btn-block">
                 Pour <span class="badge badge-light">'.$demande['prix'].'</span> Jetons
             </button>
-            <a type="button" class="btn btn-success btn-lg btn-block" href="src/controller/login.php">Accepter</a>
-            <a type="button" class="btn btn-danger btn-lg btn-block" href="src/controller/login.php">Refuser</a>
+            <button class="btn btn-success btn-lg btn-block" onclick="acceptproposition('.$demande['id_laptop'].','.$demande['id_demandeur'].')">Accepter</button>
+            <button class="btn btn-danger btn-lg btn-block" onclick="declineproposition('.$demande['id_laptop'].','.$demande['id_demandeur'].')">Refuser</button>
         </div>
         ');
 

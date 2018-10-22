@@ -10,7 +10,7 @@ function getlaptopcard(){
                    <a href="laptop.php?id= '.$laptop['id_laptop'].' "><img class="card-img-top" src="'.$laptop['url_photo1'].'" alt=""></a>
                  <div class="card-body">
                     <h5 class="card-header">
-                        <a><a class="btn btn-info" href="laptop.php?id= '.$laptop['id_laptop'].' "> '. $laptop['laptop_nom'] .' </a> <span class="badge badge-dark">'.$laptop['prix'].' jetons</span></a>
+                        <a><a class="btn btn-info" href="laptop.php?id= '.$laptop['id_laptop'].' "> '. $laptop['marque'] . ' '. $laptop['laptop_nom'] .' </a> <span class="badge badge-dark">'.$laptop['prix'].' jetons</span></a>
                     </h5>
                     <ul class="list-group">
                         <li class="list-group-item">Etat : '.$etat.'</li>

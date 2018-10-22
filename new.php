@@ -12,17 +12,8 @@ require_once("src/views/navbar.php")
 
 <!-- Page Content -->
 <?php
-if (isset($_GET['id'])){
-    if ($_GET['id']==$_SESSION['id_user']){
-        require_once('src/views/userself.php');
-    }
-    else{
-        require_once('src/views/user.php');
-    }
-}
-else{
-    require_once('src/views/userself.php');
-}
+require_once('src/views/laptopform.php');
+
 ?>
 <!-- Footer -->
 <?php
@@ -33,7 +24,6 @@ require_once("src/views/footer.php");
 <?php
 require_once("src/views/scripts.php");
 ?>
-<script src="./src/views/js/laptop.js"></script>
 </body>
 
 </html>

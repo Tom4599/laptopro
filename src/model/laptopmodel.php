@@ -46,14 +46,14 @@ Function getlaptopfromdid($id) {
 function getlaptopstockage($laptop) {
     if ($laptop['espace_stockage_hdd'] or $laptop['espace_stockage_ssd'] != null){
         if ($laptop['espace_stockage_ssd'] != null and $laptop['espace_stockage_hdd'] == null){
-            $retour=('<li>Stockage SSD : '.$laptop['espace_stockage_ssd'].'</li>');
+            $retour=('<li>Stockage SSD : '.$laptop['espace_stockage_ssd'].' Go</li>');
         }
         elseif ($laptop['espace_stockage_hdd'] != null and $laptop['espace_stockage_ssd'] == null){
-            $retour=('<li>Stockage HDD : '.$laptop['espace_stockage_hdd'].'</li>');
+            $retour=('<li>Stockage HDD : '.$laptop['espace_stockage_hdd'].' Go</li>');
         }
         else {
-            $retour=('<li>Stockage SSD : '.$laptop['espace_stockage_ssd'].'</li>
-                      <li>Stockage HDD : '.$laptop['espace_stockage_hdd'].'</li>');
+            $retour=('<li>Stockage SSD : '.$laptop['espace_stockage_ssd'].' Go</li>
+                      <li>Stockage HDD : '.$laptop['espace_stockage_hdd'].' Go</li>');
         }
 
 
@@ -201,4 +201,27 @@ function getuserdemandes($user_id){
     $laptopquery->execute();
     $rep = $laptopquery->fetchAll(PDO::FETCH_ASSOC);
     return $rep;
+}
+
+function getlaptopvendeur($laptop_id){
+    $bdd=getDatabase();
+    $sth = "SELECT id_user FROM laptop WHERE id_laptop='$laptop_id'";
+
+    #This send the request to the database and returns a list
+    $laptopquery = $bdd->prepare($sth);
+    $laptopquery->execute();
+    $rep = $laptopquery->fetchAll(PDO::FETCH_ASSOC);
+    return $rep;
+}
+
+    function insertlaptop($nom,$prix,$taille,$def,$ram,$stoHDD,$stoSSD,$poids,$etat,$url1,$url2,$url3,$id_user,$id_marque,$id_cg,$id_stockage,$id_ecran,$id_processeur){
+    $bdd=getDatabase();
+    $sth = "INSERT INTO laptop VALUES (DEFAULT,'$nom', '$prix', '$taille', '$def', '$ram', '$stoHDD', '$stoSSD', '$poids', '$etat' , CURRENT_DATE() , '$url1', '$url2', '$url3', '$id_user' ,'$id_marque','$id_cg', '$id_stockage' , '$id_ecran' , '$id_processeur')";
+//    echo $sth;
+
+    #This send the request to the database and returns a list
+    $NewPC = $bdd->prepare($sth);
+    $NewPC->execute();
+
+
 }

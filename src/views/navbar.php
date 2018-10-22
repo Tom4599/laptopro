@@ -15,7 +15,7 @@ session_start();
             if (isset($_SESSION['id_user'])) {
                 echo('
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost/laptopro/index.php">Ajouter une annonce</a>
+                    <a class="nav-link" href="http://localhost/laptopro/new.php">Ajouter une annonce</a>
                 </li>
                 ');
             }
