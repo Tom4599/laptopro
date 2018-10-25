@@ -1,0 +1,10 @@
+AuthName "Interdit d'entrer"
+  
+   AuthType Basic
+   
+   AuthUserFile "C:/wamp64/www/laptopro/admin/.htpasswd"
+   
+   
+   <RequireAll>
+       Require valid-user
+  </RequireAll>
