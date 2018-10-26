@@ -1,11 +1,11 @@
 function search() {
 
-    var input = $('#inputlaptop').value;
-    var marque = $('#marqueselect').value;
-    var processeur = $('#proselect').val;
-    var stockage = $('#stoselect').val;
-    var cg = $('#cgselect').val;
-    var ecran = $('#ecranselect').val;
+    var input = $('#inputlaptop').val();
+    var marque = $('#marqueselect').val();
+    var processeur = $('#proselect').val();
+    var stockage = $('#stoselect').val();
+    var cg = $('#cgselect').val();
+    var ecran = $('#ecranselect').val();
     console.log(input);
     console.log(marque);
     $.ajax({
@@ -22,7 +22,8 @@ function search() {
             ecran: ecran,
         },
         success: function (callback) {
-            $('#product').innerHTML = callback;
+            console.log(callback);
+            $('#product').html(callback);
 
         },
         error: function () {

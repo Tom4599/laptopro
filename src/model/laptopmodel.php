@@ -3,23 +3,23 @@ require_once("getDatabase.php");
 function getlaptopitem($name,$marque,$proc,$sto,$cg,$dalle){
     $bdd=getDatabase();
     $sth = "SELECT * FROM laptop_full_info WHERE 1=1";
-    if (is_null($name)){
+    if ($name != 'null'){
         $sth.= (" AND laptop_nom LIKE '%$name%'");
     }
-    if (is_null($marque)){
-        $sth.= (" AND laptop_nom LIKE '%$marque%'");
+    if ($marque != 'null'){
+        $sth.= (" AND marque LIKE '%$marque%'");
     }
-    if (is_null($proc)){
-        $sth.= (" AND laptop_nom LIKE '%$proc%'");
+    if ($proc != 'null'){
+        $sth.= (" AND processeur LIKE '%$proc%'");
     }
-    if (is_null($sto)){
-        $sth.= (" AND laptop_nom LIKE '%$sto%'");
+    if ($sto != 'null'){
+        $sth.= (" AND stockage LIKE '%$sto%'");
     }
-    if (is_null($cg)){
-        $sth.= (" AND laptop_nom LIKE '%$cg%'");
+    if ($cg != 'null'){
+        $sth.= (" AND carte_graphique LIKE '%$cg%'");
     }
-    if (is_null($dalle)){
-        $sth.= (" AND laptop_nom LIKE '%$dalle%'");
+    if ($dalle != 'null'){
+        $sth.= (" AND ecran LIKE '%$dalle%'");
     }
 
 

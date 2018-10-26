@@ -81,7 +81,7 @@ var cty = document.getElementById("chartdalle").getContext('2d');
 var chartdalle = new Chart(cty, {
     type: 'line',
     data: {
-        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        labels: ["Septembre", "Octobre", "Novembre", "Decembre", "Janvier", "Fevrier"],
         datasets: [{
             label: 'Utilisateurs inscrits',
             data: [12, 19, 3, 5, 2, 3],

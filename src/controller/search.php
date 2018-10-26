@@ -16,6 +16,5 @@ if($_POST['action']=='search'){
         $retour=getlaptopcard($_POST['input'],$_POST['marque'],$_POST['processeur'],$_POST['stockage'],$_POST['cg'],$_POST['ecran']);
     }
 }
-
 $jsonstring = json_encode($retour);
 echo $jsonstring;

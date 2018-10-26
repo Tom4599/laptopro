@@ -40,3 +40,44 @@ function getcgselect(){
 //        }
     }
 }
+
+function getmarqueselect2(){
+    $arrayitem = getmarqueitem();
+    foreach($arrayitem as $items){
+//        foreach ($items as $item ){
+        echo('<option value="' . $items['nom'] .'"> '. $items['nom'] .'</option>');
+//        }
+    }
+}
+function getprocesseurselect2(){
+    $arrayitem = getprocesseuritem();
+    foreach($arrayitem as $items){
+//        foreach ($items as $item ){
+        echo('<option value="' . $items['nom'] .'"> '. $items['nom'] .'</option>');
+//        }
+    }
+}
+function getstockageselect2(){
+    $arrayitem = getstockageitem();
+    foreach($arrayitem as $items){
+//        foreach ($items as $item ){
+        echo('<option value="' . $items['nom'] .'"> '. $items['nom'] .'</option>');
+//        }
+    }
+}
+function getecranselect2(){
+    $arrayitem = getecranitem();
+    foreach($arrayitem as $items){
+//        foreach ($items as $item ){
+        echo('<option value="' . $items['nom'] .'"> '. $items['nom'] .'</option>');
+//        }
+    }
+}
+function getcgselect2(){
+    $arrayitem = getcgitem();
+    foreach($arrayitem as $items){
+//        foreach ($items as $item ){
+        echo('<option value="' . $items['nom'] .'"> '. $items['nom'] .'</option>');
+//        }
+    }
+}
