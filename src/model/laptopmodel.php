@@ -1,8 +1,27 @@
 <?php
 require_once("getDatabase.php");
-function getlaptopitem(){
+function getlaptopitem($name,$marque,$proc,$sto,$cg,$dalle){
     $bdd=getDatabase();
-    $sth = "SELECT * FROM laptop_full_info";
+    $sth = "SELECT * FROM laptop_full_info WHERE 1=1";
+    if (is_null($name)){
+        $sth.= (" AND laptop_nom LIKE '%$name%'");
+    }
+    if (is_null($marque)){
+        $sth.= (" AND laptop_nom LIKE '%$marque%'");
+    }
+    if (is_null($proc)){
+        $sth.= (" AND laptop_nom LIKE '%$proc%'");
+    }
+    if (is_null($sto)){
+        $sth.= (" AND laptop_nom LIKE '%$sto%'");
+    }
+    if (is_null($cg)){
+        $sth.= (" AND laptop_nom LIKE '%$cg%'");
+    }
+    if (is_null($dalle)){
+        $sth.= (" AND laptop_nom LIKE '%$dalle%'");
+    }
+
 
     #This send the request to the database and returns a list
     $categorieitem = $bdd->prepare($sth);

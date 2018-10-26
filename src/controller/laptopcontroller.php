@@ -1,10 +1,11 @@
 <?php
 require_once($_SERVER["DOCUMENT_ROOT"] ."/laptopro/src/model/laptopmodel.php");
-function getlaptopcard(){
-    $arraylaptop = getlaptopitem();
+function getlaptopcard($name,$marque,$proc,$sto,$cg,$dalle){
+    $retour="<div class='row' id='products'>";
+    $arraylaptop = getlaptopitem($name,$marque,$proc,$sto,$cg,$dalle);
     foreach($arraylaptop as $laptop){
         $etat=getlaptopetat($laptop['etat']);
-        echo('
+        $retour .=('
         <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
             <div class="card h-100">
                    <a href="laptop.php?id= '.$laptop['id_laptop'].' "><img class="card-img-top" src="'.$laptop['url_photo1'].'" alt=""></a>
@@ -27,6 +28,8 @@ function getlaptopcard(){
         </div>
         ');
     }
+    $retour.="</div>";
+    return $retour;
 }
 function getalllaptoptab(){
     $arraylaptop=getlaptopitem();

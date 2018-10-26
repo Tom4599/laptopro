@@ -8,38 +8,39 @@ require_once($_SERVER["DOCUMENT_ROOT"] ."/laptopro/src/model/itemmodel.php");
     </div>
     <div class="card-body">
         <div class="input-group">
-            <input type="text" class="form-control" aria-label="Text input with dropdown button">
+            <input type="text" class="form-control" aria-label="Text input with dropdown button" id="inputlaptop">
             <div class="input-group-append">
-                <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Marque</option>
+                <select class="custom-select" id="marqueselect">
+                    <option selected value="null">Marque</option>
                     <?php
                     getmarqueselect();
                     ?>
                 </select>
-                <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Processeur</option>
+                <select class="custom-select" id="proselect">
+                    <option selected value="null">Processeur</option>
                     <?php
                     getprocesseurselect();
                     ?>
                 </select>
-                <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Stockage</option>
+                <select class="custom-select" id="stoselect">
+                    <option selected value="null">Stockage</option>
                     <?php
                     getstockageselect();
                     ?>
                 </select>
-                <select class="custom-select" id="inputGroupSelect01" style="width:110%">
-                    <option selected>Carte Graphique</option>
+                <select class="custom-select" id="cgselect" style="width:110%">
+                    <option selected value="null">Carte Graphique</option>
                     <?php
                     getcgselect();
                     ?>
                 </select>
-                <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Ecran</option>
+                <select class="custom-select" id="ecranselect">
+                    <option selected value="null">Ecran</option>
                     <?php
                     getecranselect();
                     ?>
                 </select>
+                <button type="button" class="btn btn-primary btn-block" onclick="search()">Chercher </button>
             </div>
         </div>
     </div>
