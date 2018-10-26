@@ -1,8 +1,9 @@
 <?php
 require_once($_SERVER["DOCUMENT_ROOT"] ."/laptopro/src/model/laptopmodel.php");
 function getuserlaptops(){
-    if (isset($_POST_id)){
-        $arraylaptop = getuserlaptop($_POST['id']);
+    if (isset($_GET['id'])){
+        $arraylaptop = getuserlaptop($_GET['id']);
+
     }
     else{
         $arraylaptop = getuserlaptop($_SESSION['id_user']);
@@ -79,5 +80,28 @@ function getdemandes($user_id){
         }
     }
 
+    return $retour;
+}
+function getallusertab(){
+    $arrayusers=getalluser();
+    $retour="";
+    foreach ($arrayusers as $user){
+        $retour .=('
+        <tr>
+            <td>'.$user['id_user'].'</td>
+            <td>'.$user['nom'].'</td>
+            <td>'.$user['prenom'].'</td>
+            <td>'.$user['mail'].'</td>
+            <td>'.$user['cp'].'</td>
+            <td>'.$user['ville'].'</td>
+            <td>'.$user['adresse'].'</td>
+            <td>'.$user['solde'].'</td>
+            <td>'.$user['solde_block'].'</td>
+            <td>
+                <button type="button" class="btn btn-danger" onclick="deleteuser('.$user['id_user'].')">Supprimer</button>
+            </td>
+        </tr>
+        ');
+    }
     return $retour;
 }

@@ -2,30 +2,31 @@
 <html lang="en">
 
 <?php
-include_once("src/views/head.html");
+include_once("../src/views/head.html");
 ?>
 <body>
 <!-- Navigation -->
 <?php
-require_once("src/views/navbar_admin.php")
+require_once("../src/views/navbar_admin.php")
 ?>
 
 
 <!-- Page Content -->
 
 <?php
-require_once("src/views/admin_annonces.php");
+require_once("../src/views/admin_annonces.php");
 ?>
 
 <!-- Footer -->
 <?php
-require_once("src/views/footer.php");
+require_once("../src/views/footer.php");
 ?>
 
 <!-- Bootstrap core JavaScript -->
 <?php
-require_once("src/views/scripts.php");
+require_once("../src/views/scripts.php");
 ?>
+<script src="../src/views/js/admin.js"></script>
 </body>
 
 </html>

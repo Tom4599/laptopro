@@ -12,13 +12,13 @@ session_start();
                 <a class="nav-link" href="http://localhost/laptopro/index.php">Acceuil <span class="sr-only"></span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="http://localhost/laptopro/admin.php">Statistiques <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="http://localhost/laptopro/admin/admin.php">Statistiques <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="http://localhost/laptopro/admin_annonces.php">Annonces <span class="sr-only"></span></a>
+                <a class="nav-link" href="http://localhost/laptopro/admin/admin_annonces.php">Annonces <span class="sr-only"></span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="http://localhost/laptopro/admin_user.php">Utilisateurs <span class="sr-only"></span></a>
+                <a class="nav-link" href="http://localhost/laptopro/admin/admin_user.php">Utilisateurs <span class="sr-only"></span></a>
             </li>
 
         </ul>

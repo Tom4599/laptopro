@@ -10,3 +10,13 @@ function getuserinfo($id){
 
     return $laptop;
 }
+function getalluser(){
+    $bdd=getDatabase();
+    $sth =('SELECT * FROM user ');
+
+    $laptopquery = $bdd->prepare($sth);
+    $laptopquery->execute();
+    $laptop = $laptopquery->fetchAll(PDO::FETCH_ASSOC);
+
+    return $laptop;
+}

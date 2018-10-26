@@ -14,6 +14,7 @@ include_once("src/views/head.html");
 //        require_once("src/views/carousel.php");
         ?>
     </header>
+
     <?php
     require_once("src/views/search.php");
     ?>

@@ -28,3 +28,23 @@ function getlaptopcard(){
         ');
     }
 }
+function getalllaptoptab(){
+    $arraylaptop=getlaptopitem();
+    $retour="";
+    foreach ($arraylaptop as $laptop){
+        $retour .=('
+        <tr>
+            <td>'.$laptop['id_laptop'].'</td>
+            <td>'.$laptop['laptop_nom'].'</td>
+            <td>'.$laptop['marque'].'</td>
+            <td>'.$laptop['prix'].'</td>
+            <td>'.$laptop['date'].'</td>
+            <td><a href="../user.php?id='.$laptop['id_vendeur'].'">'.$laptop['vendeur'].'</a></td>
+            <td><a href="../laptop.php?id='.$laptop['id_laptop'].'">Détails</a></td>            <td>
+                <button type="button" class="btn btn-danger" onclick="deletelaptop('.$laptop['id_laptop'].')">Supprimer</button>
+            </td>
+        </tr>
+        ');
+    }
+    return $retour;
+}

@@ -14,7 +14,7 @@ require_once("../src/views/navbar_admin.php")
 <!-- Page Content -->
 
 <?php
-require_once("../src/views/admin_annonces.php");
+require_once("../src/views/admin.php");
 ?>
 
 <!-- Footer -->
@@ -26,6 +26,8 @@ require_once("../src/views/footer.php");
 <?php
 require_once("../src/views/scripts.php");
 ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+<script src="../src/views/js/admin.js"></script>
 </body>
 
 </html>
